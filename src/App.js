@@ -1,6 +1,8 @@
 import React from 'react'
 import Home from './Home'
 import Biography from './Biography'
+import Gallery from './Gallery'
+import Footer from './Footer'
 import './style.sass'
 
 class App extends React.Component {
@@ -22,10 +24,13 @@ class App extends React.Component {
         break
       case 'bio': return <Biography navigate={this._navigateTo} />
         break
+      case 'gallery': return <Gallery navigate={this._navigateTo} />
+        break
       default: return <Home navigate={this._navigateTo} />
     }
     return <div className="App">
       {screen}
+      <Footer />
     </div>
   }
 }

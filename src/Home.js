@@ -5,15 +5,17 @@ class Home extends Component {
   _navToBio = () => {
     this.props.navigate('bio')
   }
+  _navToGal = () => {
+    this.props.navigate('gallery')
+  }
   render () {
     return <div className="Home">
       <div className="Home-Container">
         <aside>
           <ul>
             <li onClick={this._navToBio}>Biography</li>
-            <li>Image Gallery</li>
-            <li>Wikipedia</li>
-            <li>Contact Us</li>
+            <li onClick={this._navToGal}>Image Gallery</li>
+            <li><a href="https://en.wikipedia.org/wiki/Cindy_Crawford">Wikipedia Link</a></li>
           </ul>
         </aside>
         <div className="centralImage">

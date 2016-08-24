@@ -1,8 +1,17 @@
 $bgPurple: #6f1c6c
 $accentPurple: lighten($bgPurple, 35%)
+$ponyPink: #EF4F91
+
 body
   color: white
   background-color: $bgPurple
+  min-height: 100vh
+
+.App
+  text-align: center
+  display: flex
+  flex-direction: column
+  z-index: 99
 
 .Home
   text-align: center
@@ -20,6 +29,7 @@ body
       background-color: $bgPurple
       border: 3px dashed
       padding-top: 10px
+      margin-bottom: 0
 
     .cindySparkleBox
       .spark
@@ -27,17 +37,19 @@ body
         top: 0
         left: 0
         z-index: 2
-        height: 500px
+        height: 450px
         width: 750px
         opacity: .35
+        margin-left: -100px
       .cindy
         z-index: 1
         position: relative
         top: 0
         left: 0
-        height: 500px
+        height: 450px
         width: 750px
         margin-top: -500px
+        margin-left: -100px
         box-shadow: 5px 5px 5px $bgPurple
         border: 3px solid black
         border-radius: 10px
@@ -46,6 +58,7 @@ body
       flex-direction: column
       background-color: $bgPurple
       margin-left: 20px
+      padding-top: 45px
       border: 3px solid $accentPurple
 
       li
@@ -55,21 +68,72 @@ body
         margin: 50px 35px
         margin-left: 0
         font-size: 1em
+        a
+          text-decoration: none
+          color: $accentPurple
     aside
       margin-right: 10px
 .Biography
+  border: 5px dotted white
+
+  h1
+    margin-left: 100px
+    color: $ponyPink
+    font-family: fantasy
+
+  button
+    margin-left: 100px
+    background-color: $ponyPink
+    font-family: fantasy
+    border-radius: 5px
+    margin-bottom: 10px
+
   .infoCard
     display: flex
     text-align: left
     font-size: 1.35em
     color: black
     background-color: white
-    margin-right: 400px
-    height: 75vh
+    margin-right: 100px
+    height: 350px
     margin-left: 100px
-    img
+    box-shadow: 10px 10px 5px $ponyPink
+
+    .cindy2
       margin-left: 10px
       margin-top: 10px
+      border: 3px solid black
   p
-    color: black
-    margin: -250px 500px 0px 150px
+    color: $ponyPink
+    margin: 25px 100px 25px 100px
+    font:
+      size: 1.5em
+      family: cursive
+
+.Gallery
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 15px
+
+  .CindyGallery
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+    .galImg
+      border: 2px solid $ponyPink
+      margin: 7px
+      box-shadow: 5px 5px 5px black
+
+  button
+    background-color: $ponyPink
+    margin-top: 15px
+    font:
+      size: 24px
+      family: fantasy
+.Footer
+  display: block
+  background-color: white
