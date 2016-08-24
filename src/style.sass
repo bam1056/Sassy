@@ -1,3 +1,75 @@
+$bgPurple: #6f1c6c
+$accentPurple: lighten($bgPurple, 35%)
 body
   color: white
-  background-color: #6f1c6c
+  background-color: $bgPurple
+
+.Home
+  text-align: center
+  background-image: url('http://previews.123rf.com/images/bedo/bedo0803/bedo080300112/2767528-Sfondo-di-belle-rose-rosa--Archivio-Fotografico.jpg')
+
+  .Home-Container
+    display: flex
+    justify-content: space-around
+    align-items: center
+    color: #BF6B65
+    font-family: fantasy
+    font-size: 2em
+
+    h1
+      background-color: $bgPurple
+      border: 3px dashed
+      padding-top: 10px
+
+    .cindySparkleBox
+      .spark
+        position: relative
+        top: 0
+        left: 0
+        z-index: 2
+        height: 500px
+        width: 750px
+        opacity: .35
+      .cindy
+        z-index: 1
+        position: relative
+        top: 0
+        left: 0
+        height: 500px
+        width: 750px
+        margin-top: -500px
+        box-shadow: 5px 5px 5px $bgPurple
+        border: 3px solid black
+        border-radius: 10px
+    ul
+      display: flex
+      flex-direction: column
+      background-color: $bgPurple
+      margin-left: 20px
+      border: 3px solid $accentPurple
+
+      li
+        text-align: center
+        color: $accentPurple
+        list-style: none
+        margin: 50px 35px
+        margin-left: 0
+        font-size: 1em
+    aside
+      margin-right: 10px
+.Biography
+  .infoCard
+    display: flex
+    text-align: left
+    font-size: 1.35em
+    color: black
+    background-color: white
+    margin-right: 400px
+    height: 75vh
+    margin-left: 100px
+    img
+      margin-left: 10px
+      margin-top: 10px
+  p
+    color: black
+    margin: -250px 500px 0px 150px
