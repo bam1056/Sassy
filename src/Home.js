@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Cindy from '../images/cindyCrawford.jpg'
+import Footer from './Footer'
 
 class Home extends Component {
   _navToBio = () => {

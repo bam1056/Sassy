@@ -20,18 +20,20 @@ class App extends React.Component {
   render () {
     let screen
     switch (this.state.currentScreen) {
-      case 'home': return <Home navigate={this._navigateTo}/>
+      case 'home': screen = <Home navigate={this._navigateTo}/>
         break
-      case 'bio': return <Biography navigate={this._navigateTo} />
+      case 'bio': screen = <Biography navigate={this._navigateTo} />
         break
-      case 'gallery': return <Gallery navigate={this._navigateTo} />
+      case 'gallery': screen = <Gallery navigate={this._navigateTo} />
         break
-      default: return <Home navigate={this._navigateTo} />
     }
-    return <div className="App">
-      {screen}
-      <Footer />
-    </div>
+    return (
+      <div>
+        {screen}
+        <Footer />
+      </div>
+
+    )
   }
 }
 export default App
